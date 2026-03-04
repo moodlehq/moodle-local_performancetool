@@ -97,11 +97,8 @@ mtrace("Test site structure created. Last course id: {$lastcourseid}");
 mtrace("Generating test plan and users file for course id: {$lastcourseid} ...");
 
 try {
-
     $testplanfile = generator::create_testplan_file($lastcourseid, $size);
-    //$numusers = $gen->get_total_users_created(); TODO: Do we need to fetch the list of users created or just assume a number?
-    $numusers = 100;
-    $usersfile = generator::create_users_file($lastcourseid, !empty($options['updateuserspassword']), $numusers);
+    $usersfile = generator::create_users_file($lastcourseid, !empty($options['updateuserspassword']), $size);
 } catch (\Exception $e) {
     cli_error('Error generating test plan or users file: ' . $e->getMessage());
 }
