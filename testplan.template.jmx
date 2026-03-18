@@ -57,6 +57,33 @@
             <stringProp name="Argument.value">{{FORUMREPLYID_PLACEHOLDER}}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
+          <!-- Anchor metadata properties so JMeter does not remove them during plan parsing.
+               These are used by recorder.bsf via props.get() at runtime. -->
+          <elementProp name="siteversion" elementType="Argument">
+            <stringProp name="Argument.name">siteversion</stringProp>
+            <stringProp name="Argument.value">${__P(siteversion,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="group" elementType="Argument">
+            <stringProp name="Argument.name">group</stringProp>
+            <stringProp name="Argument.value">${__P(group,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="desc" elementType="Argument">
+            <stringProp name="Argument.name">desc</stringProp>
+            <stringProp name="Argument.value">${__P(desc,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="sitebranch" elementType="Argument">
+            <stringProp name="Argument.name">sitebranch</stringProp>
+            <stringProp name="Argument.value">${__P(sitebranch,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="sitecommit" elementType="Argument">
+            <stringProp name="Argument.name">sitecommit</stringProp>
+            <stringProp name="Argument.value">${__P(sitecommit,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
         </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
